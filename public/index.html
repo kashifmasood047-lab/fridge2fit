@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Fridge2Fit — Cook What You Have, Hit Your Goals</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f9d58">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="logo">🍲 Fridge2Fit</div>
+      <div class="tagline">Cook what you have. Hit your goal.</div>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <label class="field-label">What's in your fridge? (comma separated)</label>
+        <textarea id="ingredients" rows="3" placeholder="e.g. chicken, tomatoes, yogurt, onions, rice"></textarea>
+
+        <label class="field-label">Your goal</label>
+        <div class="pill-group" id="goalGroup">
+          <button class="pill active" data-goal="bulk">Bulk 💪</button>
+          <button class="pill" data-goal="cut">Cut 🔥</button>
+          <button class="pill" data-goal="maintain">Maintain ⚖️</button>
+        </div>
+
+        <label class="field-label">Diet notes (optional)</label>
+        <input id="notes" type="text" placeholder="e.g. no beef, low oil, quick to cook">
+
+        <button id="generateBtn" class="primary-btn">Generate Meal Idea</button>
+      </section>
+
+      <section id="resultSection" class="card result hidden">
+        <div id="loading" class="loading hidden">
+          <div class="spinner"></div>
+          <span>Thinking of something good...</span>
+        </div>
+        <div id="resultContent"></div>
+      </section>
+
+      <section id="historySection" class="history hidden">
+        <h3>Recent Meals</h3>
+        <div id="historyList"></div>
+      </section>
+    </main>
+
+    <nav class="bottomnav">
+      <button class="navbtn active" data-tab="home">🏠 Home</button>
+      <button class="navbtn" data-tab="history">📋 History</button>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
