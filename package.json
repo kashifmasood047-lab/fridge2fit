@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Fridge2Fit — turn what's in your fridge into a meal that fits your fitness goal, powered by AI.",
   "private": true,
+"type": "module",
   "scripts": {
     "dev": "vercel dev"
   },
