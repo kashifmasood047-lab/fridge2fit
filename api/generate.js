@@ -34,7 +34,7 @@ Diet notes: ${notes || 'none'}`;
         'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
       },
       body: JSON.stringify({
-       model: 'meta-llama/llama-3.1-8b-instruct:free',
+       model: 'meta-llama/llama-3.3-70b-instruct:free',
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: userPrompt },
