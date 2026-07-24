@@ -34,7 +34,7 @@ Diet notes: ${notes || 'none'}`;
         'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
       },
       body: JSON.stringify({
-        model: 'poolside/laguna-m.1:free',
+       model: 'meta-llama/llama-3.1-8b-instruct:free',
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: userPrompt },
